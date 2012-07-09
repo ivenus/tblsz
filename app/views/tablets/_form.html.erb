@@ -1,0 +1,29 @@
+<%= simple_form_for(@tablet) do |f| %>
+  <% if @tablet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tablet.errors.count, "error") %> prohibited this tablet from being saved:</h2>
+
+      <ul>
+      <% @tablet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name %>
+  <%= f.input :name2 %>
+  <%= f.input :name3 %>
+  <%= f.input :width %>
+  <%= f.input :height %>
+  <%= f.input :thickmax %>
+  <%= f.input :thickmin %>
+  <%= f.input :bezelwidth %>
+  <%= f.input :bezelheight %>
+  <%= f.input :ppi %>
+  <%= f.input :reshor %>
+  <%= f.input :resver %>
+	<%= f.association :companies %>
+
+	<%= f.button :submit %>
+<% end %>

@@ -1,0 +1,48 @@
+<h1>Listing tablets</h1>
+
+<table class="table table-striped">
+	<thead>
+  <tr>
+    <th>Name</th>
+    <th>Name2</th>
+    <th>Name3</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Thickmax</th>
+    <th>Thickmin</th>
+    <th>Bezelwidth</th>
+    <th>Bezelheight</th>
+    <th>Ppi</th>
+    <th>Reshor</th>
+    <th>Resver</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+	</thead>
+	<tbody>
+<% @tablets.each do |tablet| %>
+  <tr>
+    <td><%= tablet.name %></td>
+    <td><%= tablet.name2 %></td>
+    <td><%= tablet.name3 %></td>
+    <td><%= tablet.width %></td>
+    <td><%= tablet.height %></td>
+    <td><%= tablet.thickmax %></td>
+    <td><%= tablet.thickmin %></td>
+    <td><%= tablet.bezelwidth %></td>
+    <td><%= tablet.bezelheight %></td>
+    <td><%= tablet.ppi %></td>
+    <td><%= tablet.reshor %></td>
+    <td><%= tablet.resver %></td>
+    <td><%= link_to 'Show', tablet, class: 'btn btn-mini' %></td>
+    <td><%= link_to 'Edit', edit_tablet_path(tablet), class: 'btn btn-mini' %></td>
+    <td><%= link_to 'Destroy', tablet, confirm: 'Are you sure?', method: :delete, class: 'btn btn-mini btn-danger' %></td>
+  </tr>
+<% end %>
+	</tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Tablet', new_tablet_path %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  name2: MyString
+  name3: MyString
+  width: 9.99
+  height: 9.99
+  thickmax: 9.99
+  thickmin: 9.99
+  bezelwidth: 9.99
+  bezelheight: 9.99
+  ppi: 1
+  reshor: 1
+  resver: 1
+
+two:
+  name: MyString
+  name2: MyString
+  name3: MyString
+  width: 9.99
+  height: 9.99
+  thickmax: 9.99
+  thickmin: 9.99
+  bezelwidth: 9.99
+  bezelheight: 9.99
+  ppi: 1
+  reshor: 1
+  resver: 1
