@@ -1,0 +1,13 @@
+<% if @tablets.count > 0 %>
+	<div class="span5">
+		<img src="<%= @tablets[0].frontpic[6..@tablets[0].frontpic.length] %>">
+		<p><%= @tablets[0].name %></p>
+	</div>
+<% end %>
+
+<% if @tablets.count > 1 %>
+	<div class="span5">
+		<img src="<%= @tablets[1].frontpic[6..@tablets[1].frontpic.length] %>">
+		<p><%= @tablets[1].name %></p>
+	</div>
+<% end %>

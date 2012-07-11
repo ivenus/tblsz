@@ -37,9 +37,17 @@ class TabletsController < ApplicationController
     @tablet = Tablet.find(params[:id])
   end
 
+  def save_file
+    new_file_path = 'public/imgs/' + params[:tablet][:frontpic].original_filename
+    FileUtils.cp params[:tablet][:frontpic].tempfile, new_file_path
+
+    params[:tablet][:frontpic] = new_file_path
+  end
+
   # POST /tablets
   # POST /tablets.json
   def create
+    save_file
     @tablet = Tablet.new(params[:tablet])
 
     respond_to do |format|
@@ -56,6 +64,7 @@ class TabletsController < ApplicationController
   # PUT /tablets/1
   # PUT /tablets/1.json
   def update
+    save_file
     @tablet = Tablet.find(params[:id])
 
     respond_to do |format|

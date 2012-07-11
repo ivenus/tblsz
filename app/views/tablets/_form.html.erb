@@ -16,6 +16,8 @@
   <%= f.input :name3 %>
   <%= f.input :width %>
   <%= f.input :height %>
+  <%= f.input :diagonal %>
+  <%= f.input :weight %>
   <%= f.input :thickmax %>
   <%= f.input :thickmin %>
   <%= f.input :bezelwidth %>
@@ -24,6 +26,7 @@
   <%= f.input :reshor %>
   <%= f.input :resver %>
 	<%= f.association :companies %>
+	<%= f.input :frontpic, as: :file %>
 
 	<%= f.button :submit %>
 <% end %>
